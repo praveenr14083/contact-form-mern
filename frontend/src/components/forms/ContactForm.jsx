@@ -107,8 +107,12 @@ export default function ContactForm() {
             )}
           </div>
 
-          <Button type="submit" className="w-full">
-            Submit
+          <Button
+            type="submit"
+            className="w-full"
+            disabled={mutation.isLoading}
+          >
+            {mutation.isLoading ? "Submitting..." : "Submit"}
           </Button>
         </form>
       </CardContent>
